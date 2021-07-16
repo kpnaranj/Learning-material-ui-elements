@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+// Public libraries
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from "react";
+// Private libraries
+import Notes from "./pages/notes";
+import Create from "./pages/create";
+// Function App - REAL element
 function App() {
+  // HTML Render
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        {/* Home route */}
+        <Route exact path="/">
+          <Notes />
+        </Route>
+        {/* Create route */}
+        <Route path="/create">
+          <Create />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
+// Default element
 export default App;
