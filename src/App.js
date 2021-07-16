@@ -6,8 +6,9 @@ import { createTheme, ThemeProvider } from "@material-ui/core";
 import purple from "@material-ui/core/colors/purple";
 import green from "@material-ui/core/colors/green";
 // Private libraries
-import Notes from "./pages/notes";
+import Download from "./pages/download";
 import Create from "./pages/create";
+import Form from "./pages/form";
 // Global functions
 const theme = createTheme({
   palette: {
@@ -17,15 +18,14 @@ const theme = createTheme({
     secondary: {
       main: green[500],
     },
-    
   },
   typography: {
-      fontFamily: "Quicksand",
-      fontWeightLight: 400,
-      fontWeightRegular: 500,
-      fontWeightMedium: 400,
-      fontWeightBold: 500,
-    },
+    fontFamily: "Quicksand",
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 400,
+    fontWeightBold: 500,
+  },
 });
 // Function App - REAL element
 function App() {
@@ -36,11 +36,15 @@ function App() {
         <Switch>
           {/* Home route */}
           <Route exact path="/">
-            <Notes />
+            <Download />
           </Route>
           {/* Create route */}
           <Route path="/create">
             <Create />
+          </Route>
+          {/* Form route */}
+          <Route path="/form">
+            <Form />
           </Route>
         </Switch>
       </Router>

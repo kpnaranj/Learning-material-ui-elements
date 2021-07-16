@@ -1,0 +1,32 @@
+{
+  "subject": [
+    {
+      "property": "240 Westmount Road North",
+      "city": "Waterloo",
+      "state": "Ontario",
+      "zipCode": "N2L 3G4",
+      "id": 1
+    },
+    {
+      "property": "Needles Hall",
+      "city": "Waterloo",
+      "state": "Ontario",
+      "zipCode": "N2L 3G1",
+      "id": 2
+    },
+    {
+      "property": "Needles Hall",
+      "city": "Waterloo",
+      "state": "Ontario",
+      "zipCode": "N2L 3G1",
+      "id": 3
+    },
+    {
+      "property": "E10 Chillo Jijon and Manabi",
+      "city": "Quito",
+      "state": "Pichincha",
+      "zipCode": "170805",
+      "id": 4
+    }
+  ]
+}
