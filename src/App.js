@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
 // Material UI Customized Style
 import { createTheme, ThemeProvider } from "@material-ui/core";
-import purple from "@material-ui/core/colors/purple";
-import green from "@material-ui/core/colors/green";
+import CssBaseline from "@material-ui/core/CssBaseline";
 // Private libraries
 import Download from "./pages/download";
 import Create from "./pages/create";
@@ -12,13 +11,17 @@ import Form from "./pages/form";
 // Global functions
 const theme = createTheme({
   palette: {
+    background: {
+      default: "#F0F2F5",
+    },
     primary: {
-      main: purple[500],
+      main: "#70C72C",
     },
     secondary: {
-      main: green[500],
+      main: "#479E38",
     },
   },
+
   typography: {
     fontFamily: "Quicksand",
     fontWeightLight: 400,
@@ -32,6 +35,7 @@ function App() {
   // HTML Render
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Router>
         <Switch>
           {/* Home route */}
